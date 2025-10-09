@@ -1,10 +1,10 @@
-name = "Mona Lisa"
-period = "Italian Renaissance"
-country = "Italy"
-year = "1797"
-location = "Denon Wing"
+name = input("Enter an artifact name: ")
+country = input("Enter a country of origin: ")
+period = input("Enter a historical period: ")
+year = input("Enter a year of acquisition: ")
+location = input("Enter a museum wing: ")
 
-print("--------------------------------------------------")
+print("\n\n--------------------------------------------------")
 print("      THE NATIONAL MUSEUM OF HISTORY")
 print("--------------------------------------------------")
 print()
@@ -17,4 +17,4 @@ print("Catalog Number: " + 'ACQ-' + year + '-' + country)
 print()
 print("--------------------------------------------------")
 print("Location: "+ location)
-print("--------------------------------------------------")
+print("--------------------------------------------------\n\n")
