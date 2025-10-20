@@ -1,20 +1,20 @@
-print("==== UNIVERSITY BOOKSTORE CHECKOUT ====")
+print('='*4, "UNIVERSITY BOOKSTORE CHECKOUT", '='*4,")
 print()
-customer_name = "Emily Johnson"
+customer_name = input("Enter you name: ")
 is_faculty_staff = 'no'
-is_textbook_order = "yes"
+is_textbook_order = 'yes'
 
-book1_title = "Python Basics"
-book1_price = 85000
-book1_qty = 2
+book1_title = input("Enter title for Book 1: ")
+book1_price = float(input("Enter price for Book 1: "))
+book1_qty = int(input("Enter quantity for Book 1: "))
 
-book2_title = "Data Science 101"
-book2_price = 120000
-book2_qty = 1
+book2_title = input("Enter title for Book 2: ")
+book2_price = float(input("Enter price for Book 2: "))
+book2_qty = int(input("Enter quantity for Book 2: "))
 
-book3_title = "Machine Learning Guide"
-book3_price = 95000
-book3_qty = 3
+book3_title = input("Enter title for Book 3: ")
+book3_price = float(input("Enter price for Book 3: "))
+book3_qty = int(input("Enter quantity for Book 3: "))
 
 subtotal = book1_price * book1_qty + book2_price * book2_qty + book3_price * book3_qty
 
@@ -65,4 +65,5 @@ print("Textbook tax exemption:", is_textbook_order == 'yes')
 print("Shipping cost:", shipping)
 print("Free shipping:", total_before_tax >= 200000)
 print("Final Total:", final_total)
+
 print("Net savings or extra fees: {}".format(net_savings))
