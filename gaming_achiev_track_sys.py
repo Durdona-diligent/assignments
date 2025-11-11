@@ -25,7 +25,7 @@ def calculate_experience_points(game_mode, missions_completed, difficulty):
     return total_xp
 def calculate_skill_rating(play_hours, baseline_score, current_score):
     expected_score = 1000 + (play_hours * 100)
-    score_range = expected_score - baseline_score
+    score_range = expected_output - baseline_score
     skill_percentage = (current_score - baseline_score) / score_range * 100
     return skill_percentage
 def determine_player_rank(skill_percent):
@@ -63,8 +63,8 @@ def generate_achievement_summary(player_name, game_mode, missions, difficulty, p
     print("Experience Points: ", xp_points)
     skill_percent = calculate_skill_rating(play_hours, baseline_score, current_score)
     print("Skill Analysis:")
-    print("  Play Hours: ", play_hours, "Baseline: ", baseline_score, "Current Score: ", current_score)
-    print("  Skill Rating: ", round(skill_percent, 1), "%")
+    print(f"  Play Hours: {play_hours}, Baseline: {baseline_score}, Current Score: {current_score}")
+    print(f"  Skill Rating: ", {round(skill_percent, 1)}%")
     player_rank = determine_player_rank(skill_percent)
     print("  Player Rank: ", player_rank)
     if player_rank == "Bronze Rank":
@@ -88,4 +88,6 @@ def generate_achievement_summary(player_name, game_mode, missions, difficulty, p
 print("GAMING ACHIEVEMENT TRACKER")
 generate_achievement_summary("Phoenix", "campaign", 45, "hard", 3, 800, 1150, 3)
 generate_achievement_summary("Storm", "multiplayer", 60, "normal", 5, 900, 1300, 5)
+
 generate_achievement_summary("Echo", "tutorial", 30, "easy", 8, 850, 950, 7)
+print()
