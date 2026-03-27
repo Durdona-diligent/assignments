@@ -102,8 +102,8 @@ class TicketOrder:
 
         for ticket in self.tickets:
             desc = ticket.format_ticket()
-            print(f'  {desc}')
-            #print("  "+desc) 
+            # print(f'  {desc}')
+            print("  " + desc) 
             current_fee = ticket.service_fee()
             self.invoice.add_line(desc, current_fee)
             subtotal += ticket.price
